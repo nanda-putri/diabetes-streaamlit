@@ -335,9 +335,9 @@ elif choose == "Diagnosis":
                 joblib.dump(gaussian, filenameModelGNB)
                 predTestGNB = gaussian.predict(x_test)
                 if (predTestGNB[0] == 0):
-                    st.write("Negative Diabetes")
+                    st.write("Anda Terdeteksi Negative Diabetes")
                 elif  (predTestGNB[0] == 1):
-                    st.write("Positive Diabetes")
+                    st.write("Anda Terdeteksi Positive Diabetes")
 
         elif pilih == "Decision Tree":
             ok = st.button("Check")
@@ -353,7 +353,7 @@ elif choose == "Diagnosis":
                 # predict
                 predTestDT = tr.predict(x_test)
                 if (predTestDT[0] == 0):
-                    st.write("Negative Diabetes")
+                    st.write("Anda Terdeteksi Negative Diabetes")
                 elif  (predTestDT[0] == 1):
-                    st.write("Positive Diabetes")
+                    st.write("Anda Terdeteksi Positive Diabetes")
 
