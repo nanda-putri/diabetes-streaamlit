@@ -160,7 +160,7 @@ elif choose == "Diagnosis":
         st.write("**_Akurasi_** : ", round((knn.score(x_test, y_test)*100),2), "%")
         accuracy_score(y_test, predTestKNN)
         predTestKNN = knn.predict([[4,110,92,0,37.6,0.191,30]])
-        predTestKNN
+#         predTestKNN
 
         # GaussianNB
         st.header("b. GaussianNB")
@@ -186,7 +186,7 @@ elif choose == "Diagnosis":
         # st.write(round((gaussian.score(x_train,y_train)*100),2))
         st.write("**_Akurasi_** : ",round((gaussian.score(x_test,y_test)*100),2))
         predTestGNB = gaussian.predict([[4,110,92,0,37.6,0.191,30]])
-        predTestGNB
+#         predTestGNB
 
         # Decision Tree
         st.header("c. Decision Tree")
@@ -208,7 +208,7 @@ elif choose == "Diagnosis":
         # tr.score(x_train,y_train)*100
         st.write("**_Akurasi_** : ",round((tr.score(x_test,y_test)*100),2))
         predTestDT = tr.predict([[4,110,92,0,37.6,0.191,30]])
-        predTestDT
+#         predTestDT
         
         # cek ukuran data
 #         st.header("d. Jumlah Data")
