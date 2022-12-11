@@ -317,9 +317,9 @@ elif choose == "Diagnosis":
                 #predTestKNN[0]
 
                 if (predTestKNN[0] == 0):
-                    st.write("Negative Diabetes")
+                    st.write("Anda Terdeteksi Negative Diabetes")
                 elif  (predTestKNN[0] == 1):
-                    st.write("Positive Diabetes")
+                    st.write("Anda Terdeteksi Positive Diabetes")
 
         # GaussianNB
         elif pilih == "Gaussian Naive Baiyes":
