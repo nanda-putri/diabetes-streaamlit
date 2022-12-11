@@ -207,7 +207,7 @@ elif choose == "Diagnosis":
         accuracy_score(y_test,predTestDT)
         # tr.score(x_train,y_train)*100
         st.write("**_Akurasi_** : ",round((tr.score(x_test,y_test)*100),2))
-        predTestDT = tr.predict([[4,110,92,0,37.6,0.191,30]])
+#         predTestDT = tr.predict([[4,110,92,0,37.6,0.191,30]])
         predTestDT
         
         # cek ukuran data
@@ -225,18 +225,18 @@ elif choose == "Diagnosis":
         st.write("6,148,72,0,33.6,0.627,50")
         #input data
         # pregnancies
-        pregnan = st.number_input("Berapa kali hamil : ")
+        pregnan = st.number_input("Berapa kali hamil :  (*Hanya untuk Perempuan)")
         # glukosa
-        glukosa = st.number_input("Glukosa (2 jam terakhir) : ")
+        glukosa = st.number_input("Konsentrasi Plasma Glukosa : (Dalam 2 jam terakhir) ")
 
         #tekanan darah
-        tekanan = st.number_input("Tekanan Darah (mm Hg) : ")
+        tekanan = st.number_input("Tekanan Darah Diastolik(mm Hg) : ")
 
         #insulin
-        insulin = st.number_input("Insulin (mu U/ml) : ",)
+        insulin = st.number_input("Insulin Serum (mu U/ml) : (Dalam 2 Jam Terakhir)")
 
         #BMI
-        bmi = st.number_input("BMI (weight in kg/(height in m)^2) : ")
+        bmi = st.number_input("BMI (Indeks Masa Tubuh) : (weight in kg/(height in m)^2)")
 
         #resiko
         resiko = st.number_input("Resiko Keturunan Diabetes : ")
