@@ -9,7 +9,7 @@ with st.sidebar:
     st.title("Diabtes Melitus")
     st.sidebar.image("pict.jpg")
 
-choose = option_menu("Diabetic Detection", ["Home", "Diagnosis", "About Me"], 
+choose = option_menu("Diabetic Detection", ["Home", "Diagnosis"], 
     icons=['house', "list-task", 'person lines fill'], 
     menu_icon='cast', default_index=0, orientation="horizontal",
     styles={
@@ -57,13 +57,19 @@ elif choose == "Diagnosis":
         data
 
         # preprocessing
+        st.subheader("Seleksi Fitur")
         data = data [["Pregnancies","Glucose", "BloodPressure", "Insulin", "BMI", "DiabetesPedigreeFunction", "Age", "Outcome"]]
-
-        x = data.drop(columns = ["Outcome"])
-        #y = data.Outcome
+        data
         
-        st.subheader("Data Preprocessing")
-
+        st.subheader("Data Tanpa Label")
+        x = data.drop(columns = ["Outcome"])
+        y = data.Outcome
+        x
+        
+        st.subheader("Normaliasasi Data")
+        st.markdown('<div style="text-align: justify;">Normalisasi data adalah proses membuat beberapa variabel memiliki rentang nilai yang sama, tidak ada yang terlalu besar maupun terlalu kecil sehingga dapat membuat analisis statistik menjadi lebih mudah. Ada beberapa metode yang dapat dilakukan untuk normalisasi data. Disini saya menggunakan mdetode Min-Max Scalar.</div>', unsafe_allow_html=True)
+        st.caption("**_Rumus :_**")
+        st.latex(r'''x^{'} = \frac{x - x_{min}}{x_{max}-x_{min}}''')
         from sklearn.preprocessing import MinMaxScaler
 
         scaler = MinMaxScaler()
@@ -345,5 +351,3 @@ elif choose == "Diagnosis":
                 elif  (predTestDT[0] == 1):
                     st.write("Positive Diabetes")
 
-elif choose == "About Me":
-    "Ini adalah about me"
