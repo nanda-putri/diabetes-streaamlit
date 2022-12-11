@@ -153,6 +153,8 @@ elif choose == "Diagnosis":
         # GaussianNB
         st.header("b. GaussianNB")
         st.markdown('<div style="text-align: justify;">Naive Bayes merupakan kumpulan algoritma yang disusun berdasarkan Teorema Bayes. Teorema Bayes merupakan model matematika dengan dasar statistik dan probabilitas. Sedangkan Gaussian Naive Bayes yaitu ketika fitur atau prediktor mengambil nilai yang kontinu, setiap fitur diasumsikan telah tersalurkan menurut distribusi Gaussian.</div>', unsafe_allow_html=True)
+        st.caption("**_Rumus :_**")
+        st.latex(r'''P(C_{k}|x) = \frac{P(C_{k})P(x|C_{k})}{P(x)}''')
         from sklearn.naive_bayes import GaussianNB
 
         gaussian = GaussianNB()
@@ -176,6 +178,9 @@ elif choose == "Diagnosis":
 
         # Decision Tree
         st.header("c. Decision Tree")
+        st.markdown('<div style="text-align: justify;">Decision tree merupakan suatu metode klasifikasi yang menggunakan struktur pohon, dimana setiap node merepresentasikan atribut dan cabangnya merepresentasikan nilai dari atribut, sedangkan daunnya digunakan untuk merepresentasikan kelas. Node teratas dari decision tree ini disebut dengan root.</div>', unsafe_allow_html=True)
+        st.caption("**_Rumus Entropy :_**")
+        st.latex(r'''Entropy (S) = \sum_{i=1}^{n}-\pi * log_{2}\pi ''')
         from sklearn.tree import DecisionTreeClassifier
 
         tr = DecisionTreeClassifier()
