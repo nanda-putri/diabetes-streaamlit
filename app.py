@@ -116,10 +116,16 @@ elif choose == "Diagnosis":
         y = data['Outcome'].values
 
         # split datasets
+        st.subheader("Split Datasets")
         from sklearn.model_selection import train_test_split
         x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 0.2, random_state = 1) 
 
-        
+#         st.header("d. Jumlah Data")
+        st.write("Jumlah Total Datasets = ",x.shape)
+        st.write("Total X train = ",x_train.shape) 
+        st.write("Total y train = ",y_train.shape)
+        st.write("Total x test = ", x_test.shape)
+        st.write("Total y test = ", y_test.shape)
 
         # KNN
         st.header("a. KNN")
@@ -205,12 +211,12 @@ elif choose == "Diagnosis":
         predTestDT
         
         # cek ukuran data
-        st.header("d. Jumlah Data")
-        st.write("Jumlah Total Datasets = ",x.shape)
-        st.write("Total X train = ",x_train.shape) 
-        st.write("Total y train = ",y_train.shape)
-        st.write("Total x test = ", x_test.shape)
-        st.write("Total y test = ", y_test.shape)
+#         st.header("d. Jumlah Data")
+#         st.write("Jumlah Total Datasets = ",x.shape)
+#         st.write("Total X train = ",x_train.shape) 
+#         st.write("Total y train = ",y_train.shape)
+#         st.write("Total x test = ", x_test.shape)
+#         st.write("Total y test = ", y_test.shape)
 
 
     elif pilih == "Implementation":
