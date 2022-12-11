@@ -113,16 +113,10 @@ elif choose == "Diagnosis":
         from sklearn.model_selection import train_test_split
         x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 0.2, random_state = 1) 
 
-        # cek ukuran data
-        st.subheader("Jumlah Data")
-        st.write("Jumlah Total Datasets = ",x.shape)
-        st.write("Total X train = ",x_train.shape) 
-        st.write("Total y train = ",y_train.shape)
-        st.write("Total x test = ", x_test.shape)
-        st.write("Total y test = ", y_test.shape)
+        
 
         # KNN
-        st.header("KNN")
+        st.header("a. KNN")
         st.markdown('<div style="text-align: justify;">K-Nearest Neighbhor (K-NN) merupakan salah satu algoritma machine learning yang paling sederhana. Algoritma ini mengkelaskan data baaru menggunakan kemiripan antara data baru dengan sejumlah data (k) pada lokasi yang terdekat. Tujuan dari algoritma K-NN adalah untuk mengklasifikasikan objek baru berdasarkan atribut dan training samples.</div>', unsafe_allow_html=True)
         st.caption("**_Rumus :_**")
 
@@ -157,7 +151,7 @@ elif choose == "Diagnosis":
         predTestKNN
 
         # GaussianNB
-        st.header("GaussianNB")
+        st.header("b. GaussianNB")
         st.markdown('<div style="text-align: justify;">Naive Bayes merupakan kumpulan algoritma yang disusun berdasarkan Teorema Bayes. Teorema Bayes merupakan model matematika dengan dasar statistik dan probabilitas. Sedangkan Gaussian Naive Bayes yaitu ketika fitur atau prediktor mengambil nilai yang kontinu, setiap fitur diasumsikan telah tersalurkan menurut distribusi Gaussian.</div>', unsafe_allow_html=True)
         from sklearn.naive_bayes import GaussianNB
 
@@ -181,7 +175,7 @@ elif choose == "Diagnosis":
         predTestGNB
 
         # Decision Tree
-        st.header("Decision Tree")
+        st.header("c. Decision Tree")
         from sklearn.tree import DecisionTreeClassifier
 
         tr = DecisionTreeClassifier()
@@ -198,6 +192,14 @@ elif choose == "Diagnosis":
         tr.score(x_test,y_test)*100
         predTestDT = tr.predict([[4,110,92,0,37.6,0.191,30]])
         predTestDT
+        
+        # cek ukuran data
+        st.header("d. Jumlah Data")
+        st.write("Jumlah Total Datasets = ",x.shape)
+        st.write("Total X train = ",x_train.shape) 
+        st.write("Total y train = ",y_train.shape)
+        st.write("Total x test = ", x_test.shape)
+        st.write("Total y test = ", y_test.shape)
 
 
     elif pilih == "Implementation":
