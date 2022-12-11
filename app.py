@@ -40,7 +40,7 @@ elif choose == "Diagnosis":
 
     if pilih == "Datasets":
         st.title("Datasets")
-        st.write("Untuk mendukung proses klasifikasi website ini, saya menggunakan datasets publik yang diambil dari kaggle. Datasets ini ada 9 kolom yang terdiri dari 8 attribute dan 1 class. Atributnya antara lain Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, dan Age. Sedangkan classnya adalah Outcome. Ini merupakan link akses untuk datasets yang saya gunakan https://www.kaggle.com/datasets/mathchi/diabetes-data-set.")
+        st.markdown('<div style="text-align: justify;">Untuk mendukung proses klasifikasi website ini, saya menggunakan datasets publik yang diambil dari kaggle. Datasets ini ada 9 kolom yang terdiri dari 8 attribute dan 1 class. Atributnya antara lain Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, dan Age. Sedangkan classnya adalah Outcome. Ini merupakan link akses untuk datasets yang saya gunakan https://www.kaggle.com/datasets/mathchi/diabetes-data-set.</div>', unsafe_allow_html=True)
         df = pd.read_csv("https://raw.githubusercontent.com/nanda-putri/datamining/gh-pages/diabetes.csv")
         st.dataframe(df)
     
