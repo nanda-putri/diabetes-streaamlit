@@ -46,6 +46,7 @@ elif choose == "Diagnosis":
     
     elif pilih == "Preprocessing":
         st.title("Preprocessing")
+        st.markdown('<div style="text-align: justify;">Data preprocessing adalah teknik awal data mining untuk mengubah raw data (data mentah) menjadi format dan informasi yang lebih efisien dan bermanfaat. Format pada raw data yang diambil dari berbagai macam sumber seringkali mengalami error, missing value, dan tidak konsisten. Sehingga, perlu dilakukan pembenahan format agar hasil data mining tepat dan akurat.Preprocessing melibatkan validasi dan imputasi data, dimana validasi ini bertujuan untuk menilai tingkat kelengkapan dan akurasi data. Sementara imputasi data bertujuan untuk memperbaiki kesalahan dan memasukkan missing value, melalui program business process automation (BPA).</div>', unsafe_allow_html=True)
         # st.write("Datasets dilakukan preprocessing sebelum di uji dengan metode terpilih.")
 
         url = "https://raw.githubusercontent.com/nanda-putri/datamining/gh-pages/diabetes.csv"
@@ -122,6 +123,10 @@ elif choose == "Diagnosis":
 
         # KNN
         st.header("KNN")
+        st.markdown('<div style="text-align: justify;">K-Nearest Neighbhor (K-NN) merupakan salah satu algoritma machine learning yang paling sederhana. Algoritma ini mengkelaskan data baaru menggunakan kemiripan antara data baru dengan sejumlah data (k) pada lokasi yang terdekat. Tujuan dari algoritma K-NN adalah untuk mengklasifikasikan objek baru berdasarkan atribut dan training samples.</div>', unsafe_allow_html=True)
+        st.caption("**_Rumus :_**")
+
+        st.latex(r'''d(x,y) = \sqrt{\sum_{i=1}^{n}(x-y)^{2}}''')
         from sklearn.neighbors import KNeighborsClassifier
         from sklearn.metrics import accuracy_score
         from sklearn.model_selection import GridSearchCV
@@ -153,6 +158,7 @@ elif choose == "Diagnosis":
 
         # GaussianNB
         st.header("GaussianNB")
+        st.markdown('<div style="text-align: justify;">Naive Bayes merupakan kumpulan algoritma yang disusun berdasarkan Teorema Bayes. Teorema Bayes merupakan model matematika dengan dasar statistik dan probabilitas. Sedangkan Gaussian Naive Bayes yaitu ketika fitur atau prediktor mengambil nilai yang kontinu, setiap fitur diasumsikan telah tersalurkan menurut distribusi Gaussian.</div>', unsafe_allow_html=True)
         from sklearn.naive_bayes import GaussianNB
 
         gaussian = GaussianNB()
